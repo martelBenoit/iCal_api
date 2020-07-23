@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  hr
+  h2 Requests
+  p The iCal Web API is based on REST principles. Data resources are accessed via standard HTTP request in UTF-8 format to an API endpoint. Where possible, Web API uses appropriate HTTP verbs for each action:
+
+  table
+    tr
+      th METHOD
+      th ACTION
+    tr
+      td GET
+      td Retrieves resources
+
+  h2 Retrieves resources
+
+
+  table
+    tr
+      th URL
+      th DESCRIPTION
+    tr
+      td /v1/lesson/next
+      td The next lesson
+    tr
+      td /v1/lesson/today
+      td Today lessons
+    tr
+      td /v1/lesson/tomorrow
+      td Tomorrow lessons
+    tr
+      td /v1/lesson/{number}
+      td Lessons in {number} day
+    tr
+      td /v1/
+      td All next lessons
+
